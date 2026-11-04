@@ -42,6 +42,7 @@ pass LETMEWIN into read syscall, so passing fd 0 to it should give us ability.
 But as far as we substracting 0x1234 from it - solution will be passing 0x1234
 in decimal itself.
 ```
+```
 ❯ ./fd 1
 learn about Linux file IO
 ❯ ./fd 0
