@@ -38,13 +38,10 @@ descriptor to the calling code.
 ```
 Program handles 1 argument, which is used as fd parameter for read(3), also the 
 hexadecimal 0x1234 (4660 in dec.) substracted from it. To get flag we need to 
-pass LETMEWIN into read syscall, so passing fd 0 to it should give us ability.
-But as far as we substracting 0x1234 from it - solution will be passing 0x1234
-in decimal itself.
+pass LETMEWIN into read(3), passing fd 0 will open STDIN, so we need to pass
+0x1234 as decimal input.
 ```
 ```
-❯ ./fd 1
-learn about Linux file IO
 ❯ ./fd 0
 learn about Linux file IO
 ❯ ./fd 4660
